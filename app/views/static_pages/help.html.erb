@@ -1,2 +1,54 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<% provide(:title, 'FAQ') %>
+	<div class="span12">
+		<h3>Chunks | FAQ</h3>
+		<div class ="accordion" id="accordion2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						How does Chunks work?								
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+					By constantly asking if a chunk can be done by one/a few person(s) within a few days, else break it down into smaller chunks.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+					How is this different from brainstorm and mind mapping tools?
+					</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+					On the surface, the method used closely resembles mindmapping tools. Under the hood, the goal goes well beyond brainstorming and will help you to finish your project.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+					Why include a task list?
+					</a>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+					This project started out as a simple list to keep track of tasks, but soon I found out that defining the tasks was a more pressing issue. With clear targets we'll end up with more finished projects, hence the shift to defining the tasks, while still keeping track of them.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+					Can I "get things done" with this system?
+					</a>
+				</div>
+				<div id="collapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+					As the task list is roughly based on the ideas presented by David Allen in his book <a href="http://en.wikipedia.org/wiki/Getting_Things_Done" target="_new">Getting Things Done</a>, this should work out really well. Also splitting tasks in manageable chunks originates from this book. 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
