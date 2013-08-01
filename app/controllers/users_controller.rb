@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
 	def show
-		@user = User.find(params[:id])
+		# first check if this user is equal to the user being shown,
+		# else return to the root
+		if current_user.id == params[:id].to_i
+			@user = User.find(params[:id])
+		else
+			flash[:error] = 'Not the correct user '
+			redirect_to root_path
+		end
 	end
 	
 	def new
