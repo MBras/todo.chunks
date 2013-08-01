@@ -1,14 +1,29 @@
 <% provide(:title, 'Home') %>
-<!-- Masthead
-================================================== -->
+<!-- Masthead	================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <div class="row">
-    <div class="span12">
-      <h1>Get Things Done with Chunks!</h1>
-      <p class="lead">
-      	Chunks homepage - based on http://bootswatch.com/cerulean/# for looks
-
-      </p>
-    </div>
-  </div>
+	<div class="row">
+		<div class="span12">
+			<h1>Get Things Done with Chunks!</h1>
+			<p class="lead">
+				Chunks homepage - based on http://bootswatch.com/cerulean/# for looks
+			</p>
+		</div>
+	</div>
 </header>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(:session, url: sessions_path) do |f| %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+		<br>
+
+		<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+		<% end %>
+
+		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+	</div>
+</div>
