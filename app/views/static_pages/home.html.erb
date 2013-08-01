@@ -1,3 +1,4 @@
+<% if !signed_in? %>
 <% provide(:title, 'Home') %>
 <!-- Masthead	================================================== -->
 <header class="jumbotron subhead" id="overview">
@@ -11,7 +12,6 @@
 	</div>
 </header>
 
-<% if !signed_in? %>
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(:session, url: sessions_path) do |f| %>
@@ -28,5 +28,8 @@
 
 		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
 	</div>
-	<% end %>
 </div>
+<% else %>
+<% provide(:title, 'My chunks') %>
+Show the list of todo's
+<% end %>
