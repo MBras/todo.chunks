@@ -1,6 +1,7 @@
 TodoChunks::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :chunks, only: [:create]
   
   root  'static_pages#home'
 

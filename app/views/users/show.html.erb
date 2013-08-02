@@ -3,3 +3,16 @@
 	<%= gravatar_for @user %>
 	<%= @user.name %>
 </h1>
+<% if @user.chunks.any? %>
+	<h3><%= @user.chunks.count %> chunk(s) to do!</h3>
+	<ul class="chunks">
+		<%= render @chunks %>
+	</ul>
+
+<% else %>
+	No chunks yet
+<% end %>
+
+<section>
+	<%= render 'shared/chunk_form' %>
+</section>
