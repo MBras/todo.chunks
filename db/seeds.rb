@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ChunkStatus.create(id: 0, description: 'Open')
+ChunkStatus.create(id: 1, description: 'Closed')

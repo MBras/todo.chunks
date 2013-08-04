@@ -3,7 +3,7 @@ class CreateChunks < ActiveRecord::Migration
     create_table :chunks do |t|
       t.string :short_desc
       t.integer :user_id
-      t.integer :status_id
+      t.integer :chunk_status_id
 
       t.timestamps
     end
