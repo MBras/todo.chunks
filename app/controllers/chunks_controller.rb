@@ -8,7 +8,7 @@ class ChunksController < ApplicationController
 		@chunk = current_user.chunks.build(chunk_params)
 		if @chunk.save
 			flash[:success] = "Chunk posted!"
-			redirect_to root_url
+			redirect_to @current_user
 		else
 			render 'static_pages/home'
 		end
