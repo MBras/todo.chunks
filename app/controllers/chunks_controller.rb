@@ -1,5 +1,5 @@
 class ChunksController < ApplicationController
-	before_action :signed_in_user, only: [:create]
+	before_action :signed_in_user, only: [:create, :delete, :action]
 
 	def index
 	end
@@ -16,6 +16,30 @@ class ChunksController < ApplicationController
 		else
 			render 'static_pages/home'
 		end
+	end
+
+	def destroy
+		# set status of the chunk to deleted
+		# create an undo link
+		flash[:warning] = "Placeholder message: Chunk not yet deleted! click to undo"
+
+		# redirect to the chunk list
+		redirect_to root_url
+	end
+
+	def action
+		# determine what action to perform
+
+		# create a chunk_status_log entry with the old, new status and start and endtime
+
+		# update the status of the chunk	
+		flash[:success] = "Perform " + params['action_id'] + " on chunk " + params['id']
+
+		# redirect to the chunk list
+		redirect_to @current_user
+	end
+
+	def undo
 	end
 
 	private

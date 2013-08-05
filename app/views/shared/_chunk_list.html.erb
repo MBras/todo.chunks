@@ -1,0 +1,7 @@
+<% if @user.chunks.any? %>
+	<ol class="chunks">
+		<%= render @chunks %>
+	</ol>
+<% else %>
+	<h3>Nothing to do!</h3>
+<% end %>

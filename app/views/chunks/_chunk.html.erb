@@ -1,4 +1,8 @@
 <li>
-  <span class="content"><%= chunk.short_desc %></span> - 
-  <span class="timestamp"><%= chunk.created_at %></span>
+	<input type="checkbox" id="optionsCheckbox" value="option1">
+	<span class="content"><%= chunk.short_desc %></span>
+	<a href="/chunks/<%= chunk.id %>/action/close"><i class="icon-ok pull-right"></i></a>
+	<%= link_to chunk_path, :method => :delete  do %>
+		<i class="icon-remove pull-right"></i>
+	<% end %>
 </li>
