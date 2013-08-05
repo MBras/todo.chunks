@@ -1,8 +1,8 @@
 <%= form_for(@chunk) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
-<div class="field">
-	<%= f.text_field :short_desc, placeholder: "Describe chunk..." %>
-	<%= f.submit "Create", class: "btn btn-small btn-primary" %>
+<div class="input-append">
+	<%= f.text_field :short_desc, placeholder: "To do chunk..." %>
+	<%= f.submit "Create", class: "btn btn-primary" %>
 <div>
 <script type="text/javascript" language="JavaScript">
 	document.getElementById('chunk_short_desc').focus();
